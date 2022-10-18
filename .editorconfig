@@ -11,3 +11,7 @@ trim_trailing_whitespace = true
 [*.md]
 max_line_length = 0
 trim_trailing_whitespace = false
+
+[{*.js,*.jsx,*.ts,*.tsx}]
+ij_javascript_import_prefer_absolute_path = true
+ij_typescript_import_prefer_absolute_path = true
