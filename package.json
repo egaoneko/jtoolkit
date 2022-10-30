@@ -1,5 +1,4 @@
 {
-  "name": "root",
   "private": true,
   "workspaces": {
     "packages": [
@@ -19,7 +18,8 @@
     "lint-style": "lerna run lint-style",
     "format": "lerna run format",
     "storybook": "lerna run storybook",
-    "shared": "yarn workspace @toolkit/shared",
+    "prepublish": "yarn run build",
+    "publish": "lerna publish",
     "prepare": "husky install"
   },
   "devDependencies": {
@@ -38,6 +38,8 @@
     "@typescript-eslint/parser": "5.28.0",
     "autoprefixer": "10.4.7",
     "babel-loader": "8.2.5",
+    "commitlint": "17.1.2",
+    "commitlint-config-gitmoji": "2.2.6",
     "css-loader": "6.7.1",
     "eslint": "8.18.0",
     "eslint-config-prettier": "8.5.0",
