@@ -4,6 +4,4 @@ import './styles/global.css';
 export * from './enums';
 
 // components
-export * from './components/atoms/inputs';
-export * from './components/atoms/displays';
-export * from './components/atoms/utils';
+export * from './components';

@@ -23,14 +23,14 @@
     "schema": "node scripts/schema.js"
   },
   "dependencies": {
-    "@toolkit/layout": "0.0.1",
-    "@toolkit/navbar": "0.0.1",
+    "@toolkit/layout": "*",
+    "@toolkit/navbar": "*",
     "clsx": "1.1.1",
     "react": "18.2.0",
     "react-dom": "18.2.0"
   },
   "devDependencies": {
-    "@toolkit/config": "0.0.1",
-    "@toolkit/schema": "0.0.1"
+    "@toolkit/config": "*",
+    "@toolkit/schema": "*"
   }
 }
