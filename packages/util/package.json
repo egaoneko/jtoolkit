@@ -1,6 +1,6 @@
 {
   "name": "@jtoolkit/util",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "util",
   "author": "Frank Seo <donghyun.seo91@gmail.com>",
   "license": "MIT",
@@ -40,7 +40,7 @@
     "react-is": "18.2.0"
   },
   "devDependencies": {
-    "@jtoolkit/config": "*",
-    "@jtoolkit/schema": "*"
+    "@jtoolkit/config": "^0.0.1",
+    "@jtoolkit/schema": "^0.0.1"
   }
 }
