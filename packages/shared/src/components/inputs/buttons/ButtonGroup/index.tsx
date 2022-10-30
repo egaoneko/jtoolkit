@@ -1,6 +1,6 @@
 import { cloneElement, forwardRef, ReactNode } from 'react';
 import clsx from 'clsx';
-import { toChildrenArray } from '@toolkit/util';
+import { toChildrenArray } from '@jtoolkit/util';
 
 import { ButtonGroupDirection } from 'src/enums/button';
 import { ButtonProps } from 'src/components/inputs/buttons/Button';

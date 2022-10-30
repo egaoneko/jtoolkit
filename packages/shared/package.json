@@ -1,16 +1,16 @@
 {
-  "name": "@toolkit/shared",
+  "name": "@jtoolkit/shared",
   "version": "0.0.0",
   "description": "shared",
   "author": "Frank Seo <donghyun.seo91@gmail.com>",
   "license": "MIT",
-  "homepage": "https://github.com/egaoneko/toolkit",
+  "homepage": "https://github.com/egaoneko/jtoolkit",
   "bugs": {
-    "url": "https://github.com/egaoneko/toolkit/issues"
+    "url": "https://github.com/egaoneko/jtoolkit/issues"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/egaoneko/toolkit"
+    "url": "https://github.com/egaoneko/jtoolkit"
   },
   "publishConfig": {
     "access": "public"
@@ -38,7 +38,7 @@
     "build-storybook": "build-storybook"
   },
   "dependencies": {
-    "@toolkit/util": "*",
+    "@jtoolkit/util": "*",
     "clsx": "1.2.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
@@ -51,14 +51,14 @@
     "@babel/preset-env": "7.18.2",
     "@babel/preset-react": "7.17.12",
     "@babel/preset-typescript": "7.17.12",
+    "@jtoolkit/config": "*",
+    "@jtoolkit/schema": "*",
     "@storybook/addon-actions": "6.4.22",
     "@storybook/addon-essentials": "6.4.22",
     "@storybook/addon-links": "6.4.22",
     "@storybook/builder-webpack5": "6.4.22",
     "@storybook/manager-webpack5": "6.5.0-alpha.5",
     "@storybook/react": "6.4.22",
-    "@toolkit/config": "*",
-    "@toolkit/schema": "*",
     "storybook-dark-mode": "1.1.0"
   }
 }

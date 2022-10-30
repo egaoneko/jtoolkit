@@ -7749,13 +7749,6 @@ conventional-changelog-core@^4.2.4:
     read-pkg-up "^3.0.0"
     through2 "^4.0.0"
 
-conventional-changelog-gitmoji@0.2.5:
-  version "0.2.5"
-  resolved "https://registry.yarnpkg.com/conventional-changelog-gitmoji/-/conventional-changelog-gitmoji-0.2.5.tgz#58e4c1adac1338bc78a587c0a9dde9fc11ce04d9"
-  integrity sha512-KqBDZnPLo5C1FtqDy0kQOZx/BLFWoXfaSxIPbQ0KoMwoQpB67FG8AKRXz0Mp/+JzUt+/nEMIeCCH+G4L65JLaA==
-  dependencies:
-    q "1.5.1"
-
 conventional-changelog-preset-loader@^2.3.4:
   version "2.3.4"
   resolved "https://registry.yarnpkg.com/conventional-changelog-preset-loader/-/conventional-changelog-preset-loader-2.3.4.tgz#14a855abbffd59027fd602581f1f34d9862ea44c"
@@ -14577,7 +14570,7 @@ punycode@^2.1.0, punycode@^2.1.1:
   resolved "https://registry.yarnpkg.com/punycode/-/punycode-2.1.1.tgz#b58b010ac40c22c5657616c8d2c2c02c7bf479ec"
   integrity sha512-XRsRjdf+j5ml+y/6GKHPZbrF/8p2Yga0JPtdqTIY2Xe5ohJPD9saDJJLPvp9+NSBprVvevdXZybnj2cv8OEd0A==
 
-q@1.5.1, q@^1.5.1:
+q@^1.5.1:
   version "1.5.1"
   resolved "https://registry.yarnpkg.com/q/-/q-1.5.1.tgz#7e32f75b41381291d04611f1bf14109ac00651d7"
   integrity sha1-fjL3W0E4EpHQRhHxvxQQmsAGUdc=

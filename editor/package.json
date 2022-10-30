@@ -24,14 +24,14 @@
     "schema": "node scripts/schema.js"
   },
   "dependencies": {
-    "@toolkit/layout": "*",
-    "@toolkit/navbar": "*",
+    "@jtoolkit/layout": "*",
+    "@jtoolkit/navbar": "*",
     "clsx": "1.1.1",
     "react": "18.2.0",
     "react-dom": "18.2.0"
   },
   "devDependencies": {
-    "@toolkit/config": "*",
-    "@toolkit/schema": "*"
+    "@jtoolkit/config": "*",
+    "@jtoolkit/schema": "*"
   }
 }

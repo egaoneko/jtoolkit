@@ -6,7 +6,7 @@
     "declaration": false,
     "jsx": "react-jsx",
     "lib": ["dom", "dom.iterable", "esnext"],
-    "types": ["jest", "@toolkit/util", "@toolkit/shared"],
+    "types": ["jest", "@jtoolkit/util", "@jtoolkit/shared"],
     "paths": {}
   },
   "include": [

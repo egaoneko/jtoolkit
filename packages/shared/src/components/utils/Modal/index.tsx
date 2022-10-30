@@ -1,7 +1,7 @@
 import { ElementType, forwardRef, ReactElement, ReactNode, useCallback, useEffect, useRef } from 'react';
 import { CSSTransition } from 'react-transition-group';
 import { useToggle, useClickAway, useUnmount } from 'react-use';
-import { useForkRef } from '@toolkit/util';
+import { useForkRef } from '@jtoolkit/util';
 
 import Portal from 'src/components/utils/Portal';
 import Container, { ContainerProps } from 'src/components/bases/layouts/Container';

@@ -1,5 +1,5 @@
-/// <reference types="@toolkit/layout/types" />
-/// <reference types="@toolkit/navbar/types" />
+/// <reference types="@jtoolkit/layout/types" />
+/// <reference types="@jtoolkit/navbar/types" />
 
 declare module '*.mdx';
 declare module '*.css';

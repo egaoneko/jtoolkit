@@ -1,16 +1,16 @@
 {
-  "name": "@toolkit/config",
+  "name": "@jtoolkit/config",
   "version": "0.0.0",
   "description": "config",
   "author": "Frank Seo <donghyun.seo91@gmail.com>",
   "license": "MIT",
-  "homepage": "https://github.com/egaoneko/toolkit",
+  "homepage": "https://github.com/egaoneko/jtoolkit",
   "bugs": {
-    "url": "https://github.com/egaoneko/toolkit/issues"
+    "url": "https://github.com/egaoneko/jtoolkit/issues"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/egaoneko/toolkit"
+    "url": "https://github.com/egaoneko/jtoolkit"
   },
   "publishConfig": {
     "access": "public"

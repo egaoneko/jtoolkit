@@ -1,6 +1,6 @@
 import { Suspense } from 'react';
-import VerticalNavbar from '@toolkit/navbar/dist/components/VerticalNavbar';
-import EditorLayout from '@toolkit/layout/dist/components/EditorLayout';
+import VerticalNavbar from '@jtoolkit/navbar/dist/components/VerticalNavbar';
+import EditorLayout from '@jtoolkit/layout/dist/components/EditorLayout';
 
 import './styles/global.css';
 

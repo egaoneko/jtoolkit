@@ -1,4 +1,4 @@
-/// <reference types="@toolkit/shared/types" />
+/// <reference types="@jtoolkit/shared/types" />
 
 declare module '*.mdx';
 declare module '*.css';

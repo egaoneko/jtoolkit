@@ -10,7 +10,7 @@
     "test": "lerna run test",
     "start": "lerna run start",
     "build": "lerna run build",
-    "build:core": "lerna run build --scope @toolkit/schema --scope @toolkit/config --scope @toolkit/util --scope @toolkit/shared",
+    "build:core": "lerna run build --scope @jtoolkit/schema --scope @jtoolkit/config --scope @jtoolkit/util --scope @jtoolkit/shared",
     "serve": "lerna run serve",
     "clean": "lerna run clean",
     "schema": "lerna run schema",

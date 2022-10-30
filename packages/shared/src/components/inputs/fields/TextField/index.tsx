@@ -1,6 +1,6 @@
 import { InputHTMLAttributes, useRef, ReactNode, forwardRef } from 'react';
 import clsx from 'clsx';
-import { useForkRef } from '@toolkit/util';
+import { useForkRef } from '@jtoolkit/util';
 
 import { Color } from 'src/enums/color';
 import { Size } from 'src/enums/size';

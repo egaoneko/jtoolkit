@@ -1,16 +1,16 @@
 {
-  "name": "@toolkit/layout",
+  "name": "@jtoolkit/layout",
   "version": "0.0.0",
   "description": "layout",
   "author": "Frank Seo <donghyun.seo91@gmail.com>",
   "license": "MIT",
-  "homepage": "https://github.com/egaoneko/toolkit",
+  "homepage": "https://github.com/egaoneko/jtoolkit",
   "bugs": {
-    "url": "https://github.com/egaoneko/toolkit/issues"
+    "url": "https://github.com/egaoneko/jtoolkit/issues"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/egaoneko/toolkit"
+    "url": "https://github.com/egaoneko/jtoolkit"
   },
   "publishConfig": {
     "access": "public"
@@ -36,13 +36,13 @@
     "schema": "node scripts/schema.js"
   },
   "dependencies": {
-    "@toolkit/shared": "*",
+    "@jtoolkit/shared": "*",
     "clsx": "1.1.1",
     "react": "18.2.0",
     "react-dom": "18.2.0"
   },
   "devDependencies": {
-    "@toolkit/config": "*",
-    "@toolkit/schema": "*"
+    "@jtoolkit/config": "*",
+    "@jtoolkit/schema": "*"
   }
 }
