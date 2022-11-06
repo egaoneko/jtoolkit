@@ -2,11 +2,9 @@ import path from 'path';
 
 import $RefParser from '@apidevtools/json-schema-ref-parser';
 import { compile } from 'json-schema-to-typescript';
-import fs from 'fs-extra';
+import { outputFile, readdir } from 'fs-extra';
 
 import type { JSONSchema4 } from 'json-schema';
-
-const { readdir } = fs.promises;
 
 interface Schema {
   dereferenced: JSONSchema4;
@@ -85,7 +83,7 @@ export async function generate(schemaPath: string, targetPath: string): Promise<
         ts = `import { ${item.title} } from '${item.path}';\n` + ts;
       }
 
-      await fs.outputFile(`${targetPath}/${schema.relativeDirPath || ''}/${schema.fileName}.ts`, ts);
+      await outputFile(`${targetPath}/${schema.relativeDirPath || ''}/${schema.fileName}.ts`, ts);
     } catch (e) {
       console.error(e);
     }

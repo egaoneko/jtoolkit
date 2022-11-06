@@ -1,13 +1,25 @@
 {
-  "name": "@toolkit/config",
+  "name": "@jtoolkit/config",
   "version": "0.0.1",
   "description": "config",
+  "author": "Frank Seo <donghyun.seo91@gmail.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/egaoneko/jtoolkit",
+  "bugs": {
+    "url": "https://github.com/egaoneko/jtoolkit/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/egaoneko/jtoolkit"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
   "main": "dist/index",
   "types": "dist/index",
   "files": [
     "dist"
   ],
-  "license": "MIT",
   "scripts": {
     "clean": "rimraf dist",
     "prebuild": "yarn run clean",
@@ -19,7 +31,7 @@
     "format": "prettier --write \"src/**/*.ts\""
   },
   "dependencies": {
-    "tailwindcss": "3.1.6",
+    "tailwindcss": "3.1.8",
     "tinycolor2": "1.4.2"
   },
   "devDependencies": {

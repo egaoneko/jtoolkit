@@ -1,4 +1,4 @@
-const config = require('@toolkit/config').tailwindcss.default;
+const config = require('@jtoolkit/config').tailwindcss.default;
 
 module.exports = {
   ...config,

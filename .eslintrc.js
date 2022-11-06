@@ -55,7 +55,7 @@ module.exports = {
     react: {
       version: 'detect',
     },
-    'import/internal-module-folders': ['@toolkit/'],
+    'import/internal-module-folders': ['@jtoolkit/'],
     'import/resolver': {
       node: {
         moduleDirectory: ['node_modules', './', 'src/'],

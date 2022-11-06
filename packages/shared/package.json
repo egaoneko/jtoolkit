@@ -1,17 +1,29 @@
 {
-  "name": "@toolkit/shared",
+  "name": "@jtoolkit/shared",
   "version": "0.0.1",
   "description": "shared",
+  "author": "Frank Seo <donghyun.seo91@gmail.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/egaoneko/jtoolkit",
+  "bugs": {
+    "url": "https://github.com/egaoneko/jtoolkit/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/egaoneko/jtoolkit"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
   "main": "dist/index",
   "types": "dist/index",
   "files": [
     "dist",
     "types.d.ts"
   ],
-  "license": "MIT",
   "scripts": {
     "clean": "rimraf dist",
-    "types": "tsc --project tsconfig.types.json",
+    "types": "tsc --emitDeclarationOnly --project tsconfig.json && tsconfig-replace-paths --project tsconfig.types.json",
     "prebuild": "yarn run clean && yarn run types",
     "build": "webpack --config webpack.prod.js",
     "test": "jest",
@@ -26,12 +38,12 @@
     "build-storybook": "build-storybook"
   },
   "dependencies": {
-    "@toolkit/util": "0.0.1",
+    "@jtoolkit/util": "^0.0.1",
     "clsx": "1.2.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-is": "18.2.0",
-    "react-transition-group": "4.4.4",
+    "react-transition-group": "4.4.5",
     "react-use": "17.4.0"
   },
   "devDependencies": {
@@ -39,14 +51,14 @@
     "@babel/preset-env": "7.18.2",
     "@babel/preset-react": "7.17.12",
     "@babel/preset-typescript": "7.17.12",
+    "@jtoolkit/config": "^0.0.1",
+    "@jtoolkit/schema": "^0.0.1",
     "@storybook/addon-actions": "6.4.22",
     "@storybook/addon-essentials": "6.4.22",
     "@storybook/addon-links": "6.4.22",
     "@storybook/builder-webpack5": "6.4.22",
     "@storybook/manager-webpack5": "6.5.0-alpha.5",
     "@storybook/react": "6.4.22",
-    "@toolkit/config": "0.0.1",
-    "@toolkit/schema": "0.0.1",
     "storybook-dark-mode": "1.1.0"
   }
 }

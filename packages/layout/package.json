@@ -1,17 +1,29 @@
 {
-  "name": "@toolkit/layout",
+  "name": "@jtoolkit/layout",
   "version": "0.0.1",
   "description": "layout",
+  "author": "Frank Seo <donghyun.seo91@gmail.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/egaoneko/jtoolkit",
+  "bugs": {
+    "url": "https://github.com/egaoneko/jtoolkit/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/egaoneko/jtoolkit"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
   "main": "dist/index",
   "types": "dist/index",
   "files": [
     "dist"
   ],
-  "license": "MIT",
   "scripts": {
     "clean": "rimraf dist",
     "start": "webpack-dev-server",
-    "types": "tsc --project tsconfig.types.json",
+    "types": "tsc --emitDeclarationOnly --project tsconfig.json && tsconfig-replace-paths --project tsconfig.types.json",
     "prebuild": "yarn run clean && yarn run types",
     "build": "webpack --config webpack.prod.js",
     "serve": "serve dist -p 3001",
@@ -24,13 +36,13 @@
     "schema": "node scripts/schema.js"
   },
   "dependencies": {
-    "@toolkit/shared": "0.0.1",
-    "clsx": "1.1.1",
+    "@jtoolkit/shared": "^0.0.1",
+    "clsx": "1.2.1",
     "react": "18.2.0",
     "react-dom": "18.2.0"
   },
   "devDependencies": {
-    "@toolkit/config": "0.0.1",
-    "@toolkit/schema": "0.0.1"
+    "@jtoolkit/config": "^0.0.1",
+    "@jtoolkit/schema": "^0.0.1"
   }
 }

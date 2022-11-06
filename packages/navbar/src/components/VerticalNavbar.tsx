@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import { Button } from '@toolkit/shared';
+import { Button } from '@jtoolkit/shared';
 
 import 'src/styles';
 

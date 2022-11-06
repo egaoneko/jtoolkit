@@ -9,7 +9,7 @@ module.exports = {
     './dist/components/VerticalNavbar': './src/components/VerticalNavbar',
   },
   shared: {
-    '@toolkit/shared': { singleton: true, requiredVersion: deps['@toolkit/shared'] },
+    '@jtoolkit/shared': { singleton: true, requiredVersion: deps['@jtoolkit/shared'] },
     react: { singleton: true, requiredVersion: deps.react },
     'react-dom': {
       singleton: true,

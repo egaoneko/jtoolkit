@@ -1,13 +1,25 @@
 {
-  "name": "@toolkit/schema",
+  "name": "@jtoolkit/schema",
   "version": "0.0.1",
   "description": "schema",
+  "author": "Frank Seo <donghyun.seo91@gmail.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/egaoneko/jtoolkit",
+  "bugs": {
+    "url": "https://github.com/egaoneko/jtoolkit/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/egaoneko/jtoolkit"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
   "main": "dist/index",
   "types": "dist/index",
   "files": [
     "dist"
   ],
-  "license": "MIT",
   "scripts": {
     "clean": "rimraf dist",
     "prebuild": "yarn run clean",
