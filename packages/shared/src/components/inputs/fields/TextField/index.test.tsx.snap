@@ -20,7 +20,7 @@ exports[`TextField Snapshots renders TextField with default 1`] = `
   className="wrapper"
 >
   <div
-    className="container medium standard"
+    className="container medium standard primary"
   >
     <input
       className="input"
@@ -36,7 +36,7 @@ exports[`TextField Snapshots renders TextField with default options 1`] = `
   className="wrapper"
 >
   <div
-    className="container medium standard"
+    className="container medium standard primary"
   >
     <input
       className="input"
@@ -51,13 +51,15 @@ exports[`TextField Snapshots renders TextField with endIcon 1`] = `
   className="wrapper"
 >
   <div
-    className="container medium standard"
+    className="container medium standard primary"
   >
     <input
       className="input"
       disabled={false}
     />
-    <span>
+    <span
+      className="icon"
+    >
       <svg
         className="svg medium filled"
         height="1em"
@@ -78,9 +80,11 @@ exports[`TextField Snapshots renders TextField with icons 1`] = `
   className="wrapper"
 >
   <div
-    className="container medium standard"
+    className="container medium standard primary"
   >
-    <span>
+    <span
+      className="icon"
+    >
       <svg
         className="svg medium filled"
         height="1em"
@@ -96,7 +100,9 @@ exports[`TextField Snapshots renders TextField with icons 1`] = `
       className="input"
       disabled={false}
     />
-    <span>
+    <span
+      className="icon"
+    >
       <svg
         className="svg medium filled"
         height="1em"
@@ -117,7 +123,7 @@ exports[`TextField Snapshots renders TextField with rounded 1`] = `
   className="wrapper"
 >
   <div
-    className="container medium standard rounded"
+    className="container medium standard primary rounded"
   >
     <input
       className="input"
@@ -132,7 +138,7 @@ exports[`TextField Snapshots renders TextField with size 1`] = `
   className="wrapper"
 >
   <div
-    className="container small standard"
+    className="container small standard primary"
   >
     <input
       className="input"
@@ -147,9 +153,11 @@ exports[`TextField Snapshots renders TextField with startIcon 1`] = `
   className="wrapper"
 >
   <div
-    className="container medium standard"
+    className="container medium standard primary"
   >
-    <span>
+    <span
+      className="icon"
+    >
       <svg
         className="svg medium filled"
         height="1em"
@@ -174,7 +182,7 @@ exports[`TextField Snapshots renders TextField with variant 1`] = `
   className="wrapper"
 >
   <div
-    className="container medium standard"
+    className="container medium standard primary"
   >
     <input
       className="input"

@@ -21,7 +21,7 @@ const TextField = forwardRef<HTMLInputElement, TextFieldProps>(function Button(
   {
     variant = FieldVariant.STANDARD,
     size = Size.MEDIUM,
-    color,
+    color = Color.PRIMARY,
     disabled = false,
     rounded = false,
     startIcon,
@@ -41,9 +41,9 @@ const TextField = forwardRef<HTMLInputElement, TextFieldProps>(function Button(
           [styles.disabled]: disabled,
         })}
       >
-        {startIcon && <span>{startIcon}</span>}
+        {startIcon && <span className={styles.icon}>{startIcon}</span>}
         <input ref={handleRef} className={styles.input} disabled={disabled} {...props} />
-        {endIcon && <span>{endIcon}</span>}
+        {endIcon && <span className={styles.icon}>{endIcon}</span>}
       </div>
     </div>
   );
