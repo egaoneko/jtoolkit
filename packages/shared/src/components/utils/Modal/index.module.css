@@ -8,17 +8,25 @@
 }
 
 .enter {
-  @apply opacity-0;
+  .container {
+    @apply opacity-0;
+  }
 }
 
 .enterActive {
-  @apply opacity-100 transition-opacity ease-in-out delay-[225];
+  .container {
+    @apply opacity-100 transition-opacity duration-200;
+  }
 }
 
 .exit {
-  @apply opacity-100;
+  .container {
+    @apply opacity-100;
+  }
 }
 
 .exitActive {
-  @apply opacity-0 transition-opacity ease-in-out delay-[225];
+  .container {
+    @apply opacity-0 transition-opacity duration-200;
+  }
 }
