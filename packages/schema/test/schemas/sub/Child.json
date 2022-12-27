@@ -1,0 +1,22 @@
+{
+  "$schema": "http://json-schema.org/draft/2021-06/schema",
+  "title": "Child",
+  "type": "object",
+  "extends": [{
+    "$ref": "../Parent.json"
+  }],
+  "properties": {
+    "child1": {
+      "type": "number",
+      "description": "Child Properties 1"
+    },
+    "child2": {
+      "type": "string",
+      "description": "Child Properties 2"
+    }
+  },
+  "required": [
+    "child1"
+  ],
+  "additionalProperties": false
+}

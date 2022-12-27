@@ -2,7 +2,7 @@ import path from 'path';
 
 import $RefParser from '@apidevtools/json-schema-ref-parser';
 import { compile } from 'json-schema-to-typescript';
-import { outputFile, readdir } from 'fs-extra';
+import { outputFile, readdir, appendFile } from 'fs-extra';
 
 import type { JSONSchema4 } from 'json-schema';
 
@@ -21,7 +21,16 @@ interface Import {
   path: string;
 }
 
-export async function generate(schemaPath: string, targetPath: string): Promise<void> {
+export interface GenerateOption {
+  generateIndex?: boolean;
+}
+
+export async function generate(schemaPath: string, targetPath: string, options?: GenerateOption): Promise<void> {
+  options = {
+    generateIndex: false,
+    ...options,
+  };
+
   const schemas: Schema[] = [];
   const schemaMap: Map<string, Schema> = new Map();
 
@@ -35,9 +44,7 @@ export async function generate(schemaPath: string, targetPath: string): Promise<
     const dirNames = relativeDirPath.replace(schemaPath, '').split(path.sep);
     const dirName = dirNames[dirNames.length - 1];
     const fileName = path.basename(filePath).split('.').shift();
-    const dereferenced = (await $RefParser.dereference(filePath, {
-      resolve: {},
-    })) as JSONSchema4;
+    const dereferenced = (await $RefParser.dereference(filePath)) as JSONSchema4;
 
     const schema: Schema = {
       dereferenced,
@@ -86,6 +93,28 @@ export async function generate(schemaPath: string, targetPath: string): Promise<
       await outputFile(`${targetPath}/${schema.relativeDirPath || ''}/${schema.fileName}.ts`, ts);
     } catch (e) {
       console.error(e);
+    }
+  }
+
+  if (options.generateIndex) {
+    await generateIndex(targetPath);
+  }
+}
+
+async function generateIndex(dir: string) {
+  const dirents = await readdir(dir, { withFileTypes: true });
+  const indexPath = path.resolve(dir, 'index.ts');
+  for (const dirent of dirents) {
+    const res = path.resolve(dir, dirent.name);
+    if (dirent.isDirectory()) {
+      await generateIndex(res);
+      await appendFile(indexPath, `export * as ${dirent.name} from './${dirent.name}';\n`);
+    } else {
+      if (!/.ts/.test(dirent.name)) {
+        continue;
+      }
+      const fileName = path.basename(res).split('.').shift();
+      await appendFile(indexPath, `export * from './${fileName}';\n`);
     }
   }
 }

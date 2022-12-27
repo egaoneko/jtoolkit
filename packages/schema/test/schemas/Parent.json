@@ -1,0 +1,17 @@
+{
+  "$schema": "http://json-schema.org/draft/2021-06/schema",
+  "title": "Parent",
+  "type": "object",
+  "properties": {
+    "parent1": {
+      "type": "number",
+      "description": "Parent Properties 2"
+    },
+    "parent2": {
+      "type": "string",
+      "description": "Parent Properties 2"
+    }
+  },
+  "required": ["parent1"],
+  "additionalProperties": false
+}

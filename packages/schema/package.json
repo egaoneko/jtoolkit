@@ -27,14 +27,15 @@
     "compile": "tsc --project tsconfig.json",
     "test": "jest",
     "test:watch": "jest --watch",
+    "test:script": "rimraf temp && node test/schema.js",
     "lint": "eslint \"src/**/*.{js,ts}\" --fix",
     "format": "prettier --write \"src/**/*.ts\""
   },
   "dependencies": {
-    "@apidevtools/json-schema-ref-parser": "9.0.9",
+    "@apidevtools/json-schema-ref-parser": "9.1.0",
     "fs-extra": "10.1.0",
     "json-schema": "0.4.0",
-    "json-schema-to-typescript": "10.1.5"
+    "json-schema-to-typescript": "11.0.2"
   },
   "devDependencies": {
     "@types/fs-extra": "9.0.13"
