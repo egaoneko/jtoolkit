@@ -3,6 +3,7 @@
   "workspaces": {
     "packages": [
       "packages/**",
+      "designs/**",
       "editor"
     ]
   },
@@ -10,7 +11,7 @@
     "test": "lerna run test",
     "start": "lerna run start",
     "build": "lerna run build",
-    "build:core": "lerna run build --scope @jtoolkit/schema --scope @jtoolkit/config --scope @jtoolkit/util --scope @jtoolkit/shared",
+    "build:core": "lerna run build --scope @jtoolkit/schema --scope @jtoolkit/config --scope @designs/util --scope @designs/shared",
     "serve": "lerna run serve",
     "clean": "lerna run clean",
     "schema": "lerna run schema",
