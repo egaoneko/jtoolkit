@@ -1,0 +1,38 @@
+{
+  "name": "@jtoolkit/utoken",
+  "version": "0.0.2",
+  "description": "utoken",
+  "author": "Frank Seo <donghyun.seo91@gmail.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/egaoneko/jtoolkit",
+  "bugs": {
+    "url": "https://github.com/egaoneko/jtoolkit/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/egaoneko/jtoolkit"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "main": "dist/index",
+  "types": "dist/index",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "clean": "rimraf dist",
+    "prebuild": "yarn run clean",
+    "build": "npm run compile",
+    "compile": "tsc --project tsconfig.json",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:script": "node test/token.js",
+    "lint": "eslint \"src/**/*.{js,ts}\" --fix",
+    "format": "prettier --write \"src/**/*.ts\""
+  },
+  "dependencies": {
+    "jose": "4.11.1",
+    "short-uuid": "4.2.2"
+  }
+}
