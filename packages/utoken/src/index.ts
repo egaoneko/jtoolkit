@@ -5,7 +5,8 @@ const translator = short(short.constants.flickrBase58);
 
 export interface GenerateOption {
   alg: string;
-  expirationTime: number | string;
+  issueAt?: boolean | number;
+  expirationTime?: number | string;
   secret: Uint8Array;
 }
 
@@ -13,14 +14,20 @@ export async function generate(options: GenerateOption): Promise<{
   header: string;
   token: string;
 }> {
-  const { alg, expirationTime, secret } = options;
+  const { alg, issueAt, expirationTime, secret } = options;
   const uid = translator.new();
 
-  const jwt = await new SignJWT({ uid })
-    .setProtectedHeader({ alg })
-    .setIssuedAt()
-    .setExpirationTime(expirationTime)
-    .sign(secret);
+  const builder = new SignJWT({ uid }).setProtectedHeader({ alg });
+
+  if (issueAt) {
+    builder.setIssuedAt(Number.isInteger(issueAt) ? (issueAt as number) : undefined);
+  }
+
+  if (expirationTime) {
+    builder.setExpirationTime(expirationTime);
+  }
+
+  const jwt = await builder.sign(secret);
   const [header, ...rest] = jwt.split('.');
   return {
     header,
