@@ -116,7 +116,7 @@ async function generateIndex(dir: string) {
       await generateIndex(res);
       await appendFile(indexPath, `export * as ${dirent.name} from './${dirent.name}';\n`);
     } else {
-      if (!/.ts/.test(dirent.name)) {
+      if (!/\.ts/.test(dirent.name) || /^index/.test(dirent.name)) {
         continue;
       }
       const fileName = path.basename(res).split('.').shift();
