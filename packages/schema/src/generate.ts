@@ -1,8 +1,9 @@
 import path from 'path';
+import { existsSync } from 'fs';
 
 import $RefParser from '@apidevtools/json-schema-ref-parser';
 import { compile } from 'json-schema-to-typescript';
-import { outputFile, readdir, appendFile } from 'fs-extra';
+import { outputFile, readdir, appendFile, unlink } from 'fs-extra';
 
 import type { JSONSchema4 } from 'json-schema';
 
@@ -104,6 +105,11 @@ export async function generate(schemaPath: string, targetPath: string, options?:
 async function generateIndex(dir: string) {
   const dirents = await readdir(dir, { withFileTypes: true });
   const indexPath = path.resolve(dir, 'index.ts');
+
+  if (existsSync(indexPath)) {
+    await unlink(indexPath);
+  }
+
   for (const dirent of dirents) {
     const res = path.resolve(dir, dirent.name);
     if (dirent.isDirectory()) {
