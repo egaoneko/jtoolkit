@@ -1,6 +1,6 @@
 {
   "name": "@jtoolkit/layout",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "layout",
   "author": "Frank Seo <donghyun.seo91@gmail.com>",
   "license": "MIT",
@@ -36,13 +36,13 @@
     "schema": "node scripts/schema.js"
   },
   "dependencies": {
-    "@jtoolkit/shared": "^0.0.3",
+    "@jtoolkit/shared": "^0.0.4",
     "clsx": "1.2.1",
     "react": "18.2.0",
     "react-dom": "18.2.0"
   },
   "devDependencies": {
     "@jtoolkit/config": "^0.0.3",
-    "@jtoolkit/schema": "^0.0.2"
+    "@jtoolkit/schema": "^0.0.3"
   }
 }

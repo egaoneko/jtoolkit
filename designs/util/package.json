@@ -1,6 +1,6 @@
 {
   "name": "@jtoolkit/util",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "util",
   "author": "Frank Seo <donghyun.seo91@gmail.com>",
   "license": "MIT",
@@ -41,6 +41,6 @@
   },
   "devDependencies": {
     "@jtoolkit/config": "^0.0.3",
-    "@jtoolkit/schema": "^0.0.2"
+    "@jtoolkit/schema": "^0.0.3"
   }
 }
